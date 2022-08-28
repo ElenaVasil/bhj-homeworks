@@ -3,7 +3,7 @@ const next = document.querySelector('.slider__arrow_next');
 const arr = Array.from(document.querySelectorAll('.slider__item'));
 
 prev.onclick = () => {
-  let currentSlider = arr.indexOf(document.querySelector('.slider__item_active'));
+  let currentSlider = arr.findIndex(i=> i === document.querySelector('.slider__item_active'));
   currentSlider --;
   if (currentSlider < 0) {
     arr[currentSlider+1].classList.remove('slider__item_active');
@@ -15,7 +15,7 @@ prev.onclick = () => {
   }
 }
 next.onclick = () => {
-  let currentSlider = arr.indexOf(document.querySelector('.slider__item_active'));
+  let currentSlider = arr.findIndex(i=> i === document.querySelector('.slider__item_active'));
   currentSlider ++;
   if (currentSlider === arr.length) {
     arr[currentSlider-1].classList.remove('slider__item_active');

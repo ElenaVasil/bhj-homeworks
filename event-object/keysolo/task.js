@@ -18,18 +18,17 @@ class Game {
 
   registerEvents() {
 
-   document.addEventListener('keydown', () => {
-      let needSymb = this.currentSymbol.textContent.toUpperCase();
-      let getSymb = String.fromCharCode(event.keyCode);
-      //let getSymb = document.addEventListener('keydown', (e) => return e.key);
-      
-      
-      if (needSymb === getSymb) {
-        this.success();
-      } else {
-        this.fail();
-      }
-    });
+  document.addEventListener('keydown', () => {
+    let needSymb = this.currentSymbol.textContent.toUpperCase();
+    let getSymb = String.fromCharCode(event.keyCode);
+    //let getSymb = this.event.key;
+    
+    if (needSymb === getSymb) {
+      this.success();
+    } else {
+      this.fail();
+    }
+  });
   }
 
   success() {

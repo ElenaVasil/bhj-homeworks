@@ -34,4 +34,16 @@ btnAdd.forEach((btn) => btn.addEventListener('click', (e) => {
       <div class="cart__product-count">` + count + `</div>
       </div>`
   }
+  /*
+  let isInCart = products.find((product)=> {
+    product.dataset.id === id;
+  });
+  if (isInCart) {
+    products.querySelector('.cart__product-count').textContent = parseInt(products.querySelector('.cart__product-count').textContent) + parseInt(count);
+  } else {
+    cart.innerHTML += `<div class="cart__product" data-id=` + id + `>
+      <img class="cart__product-image" src=`+ img + `>
+      <div class="cart__product-count">` + count + `</div>
+      </div>`
+  }   */  
 }));
